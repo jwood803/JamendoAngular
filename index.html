@@ -7,6 +7,7 @@
   <link href="grid.css" rel="stylesheet" type="text/css">
   <link href="style.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js" type="text/javascript"></script>
+  <script src="https://rawgithub.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-tpls-0.6.0.min.js" type="text/javascript"></script>
   <script src="Album.js" type="text/javascript"></script>
 </head>
   <body ng-controller="Album">
@@ -14,9 +15,9 @@
       <h1>Jamendo Artist Search</h1>
 
       <input id="artist" type="text" placeholder="Enter artist name" ng-model="artist">
-      <button ng-click="doRequest()">Get Albums</button><br/><br/>
+      <button ng-click="getAlbums()">Get Albums</button><br/><br/>
       <h2>Album Info</h2>
-      <div id="albums" ng-repeat="album in albums">       
+      <div id="albums" ng-repeat="album in albums">
         {{album.name}}<br/>
         <img src="{{album.image}}">
       </div>
