@@ -3,3 +3,8 @@ body {
 	background-color: #980000;
 	color: #F8F3BC;
 }
+
+.pleaseWait {
+	background-color: steelgrey;
+	opacity: 0.4;
+}
