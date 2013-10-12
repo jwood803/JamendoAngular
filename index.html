@@ -16,7 +16,7 @@
 
       <input id="artist" type="text" placeholder="Enter artist name" ng-model="artist">
       <button ng-click="getAlbums()">Get Albums</button><br/><br/>
-      <div ng-hide="albums.length > 0">
+      <div>
         <h2>Album Info</h2>
         <div id="albums" ng-repeat="album in albums">        
             {{album.name}}<br/>
