@@ -18,9 +18,9 @@
       <button ng-click="getAlbums()">Get Albums</button><br/><br/>
       <div id="albums" ng-repeat="album in albums">
         <div ng-if="albums.length > 0">
-        <h2>Album Info</h2>
-            {{album.name}}<br/>
-            <img src="{{album.image}}">
+          <h2>Album Info</h2>
+          {{album.name}}<br/>
+          <img src="{{album.image}}">
         </div>
       </div>
     </div>
