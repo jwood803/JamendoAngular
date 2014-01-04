@@ -1,7 +1,7 @@
 JamendoAngular
 ==============
 
-Using AngularJS to consume some of the Jamendo API.
+Using AngularJS to consume some of the Jamendo API. [Demo site](http://htmlpreview.github.io/?https://github.com/jwood803/JamendoAngular/blob/master/index.html).
 
 A bit of help was given for some of the CSS:
 
