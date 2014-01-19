@@ -1,7 +1,9 @@
-jamendoApp.service('albumsService', function($scope, $http) {
+jamendoApp
+.factory('albumsService', function($scope, $http) {
 	var serviceBase = "http://api.jamendo.com/v3.0/";
 
-	this.getAlbums = function() {
+	return { 
+		getAlbums: function() {
 			$http.get(serviceBase + "albums/?client_id=b6747d04&format=jsonpretty&artist_name=" + $scope.artist)
 	         .success(function(data) {
 	            if(data.headers.status == 'success') {
@@ -16,4 +18,7 @@ jamendoApp.service('albumsService', function($scope, $http) {
          	});
 		}
 	}
-});
+})
+.controller('AlbumController', ['albumsService', function($scope, $http, albumsService) {
+    $scope.albums = albumsService.getAlbums(); 
+}]);
