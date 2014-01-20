@@ -15,5 +15,4 @@ jamendoApp.service('albumsService', function($scope, $http) {
 	           alert(error);
          	});
 		}
-	}
 });
