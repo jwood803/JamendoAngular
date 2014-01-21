@@ -1,3 +1,5 @@
 jamendoApp.controller('AlbumController', ['albumsService', function($scope, $http, albumsService) {
-    $scope.albums = albumsService.getAlbums(); 
+    $scope.getAlbums = function() {
+    	$scope.albums = albumsService.getAlbums();
+    }
 }]);

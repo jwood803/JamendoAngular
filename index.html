@@ -8,8 +8,6 @@
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js" type="text/javascript"></script>
   <script src="app.js" type="text/javascript"></script>
-  <script src="services/albumsService.js" type="text/javascript"></script>
-  <script src="controllers/AlbumController.js" type="text/javascript"></script>
 </head>
   <body ng-controller="AlbumController">
     <div class="container">
@@ -17,12 +15,9 @@
 
       <input id="artist" type="text" placeholder="Enter artist name" ng-model="artist">
       <button ng-click="getAlbums()">Get Albums</button><br/><br/>
+      <h2>Album Info</h2>
       <div id="albums" ng-repeat="album in albums">
-        <div ng-if="albums.length > 0">
-          <h2>Album Info</h2>
-          {{album.name}}<br/>
-          <img src="{{album.image}}">
-        </div>
+        {{album.name}}<br/>
       </div>
     </div>
   </body>
