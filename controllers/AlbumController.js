@@ -1,5 +1,14 @@
-jamendoApp.controller('AlbumController', ['albumsService', function($scope, $http, albumsService) {
+jamendoApp.controller('AlbumController', function($scope, $http, albumsService) {
     $scope.getAlbums = function() {
-    	$scope.albums = albumsService.getAlbums();
+		var artist = $scope.artist;
+
+    	albumsService.getAlbums(artist, function(data) {
+		            if(data.headers.status == 'success') {
+		              $scope.albums = data.results;
+		            }
+		            else {
+		              alert("Error - " + data.headers.error_message);
+		            }
+		         });
     }
-}]);
+});
